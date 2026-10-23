@@ -1,0 +1,21 @@
+name: Build PC app
+
+on:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install flask pystray pillow pyinstaller
+      - name: Build single .exe
+        run: pyinstaller --onefile --noconsole --name ShutdownSchedulerPC --hidden-import pystray._win32 pc_server/pc_server.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ShutdownSchedulerPC-exe
+          path: dist/ShutdownSchedulerPC.exe
