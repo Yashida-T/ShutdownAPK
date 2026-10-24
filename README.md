@@ -1,1 +1,1 @@
-If you're just here for the application you dont need to do much. Just download the exe zip and the apk (andriod - only). Be sure to be connected to the same IP and give public network access when prompted by the exe file. :D no its not gonna do anything to your pc.
+If you're just here for the application you dont need to do much. Just download the exe zip and the apk (andriod - only). Be sure to be connected to the same wifi and give public network access when prompted by the exe file. :D no its not gonna do anything to your pc.
